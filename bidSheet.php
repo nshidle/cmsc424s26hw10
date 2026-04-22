@@ -15,13 +15,15 @@ foreach ($result as $document) {
         }
     }
 
-    echo "You are bidding on a **$selectedItem** <br>";
-    echo "The current bid is **$highestBid** <br>";
+    echo "You are bidding on a $selectedItem <br>";
+    echo "<br>";
+    echo "The current bid is $highestBid <br>";
+    echo "<br>"
 
     echo 
     '<form action="bid.php" method="POST">
         Your bid: <input type="number" name="new_bid" required><br>
-        <input type="hidden" name="item_name" value="' . $selectedItem . '">
+        <input type="hidden" name="item" value="' . $selectedItem . '">
         <input type="submit" value="Submit">
     </form>';
 }
