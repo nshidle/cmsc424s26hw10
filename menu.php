@@ -2,16 +2,16 @@
 require ('db_connect.php');
 
 try {
-    $query = new MongoDB\Driver\Query([], []);
+    $queryMongo = new MongoDB\Driver\Query([], []);
     
-    $mongodb = $manager->executeQuery("$dbName.bids", $query);
+    $result = $manager->executeQuery("$dbName.bids", $queryMongo);
 
     echo 
     '<form action="bidSheet.php" method="POST">
     Choose an item to bid on: 
-    <select name="item_name">';
+    <select name="item">';
     
-    foreach ($mongodb as $document) {
+    foreach ($result as $document) {
         echo '<option value="' . $document->item . '">' . $document->item . '</option>';
     }
     
@@ -21,6 +21,6 @@ try {
     </form>';
 
 } catch (Exception $e) {
-    echo "Could not connect:\n";
+    echo "Could not connect\n";
 }
 ?>
