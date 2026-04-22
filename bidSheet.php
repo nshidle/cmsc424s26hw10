@@ -18,7 +18,7 @@ foreach ($result as $document) {
     echo "You are bidding on a $selectedItem <br>";
     echo "<br>";
     echo "The current bid is $highestBid <br>";
-    echo "<br>"
+    echo "<br>";
 
     echo 
     '<form action="bid.php" method="POST">
