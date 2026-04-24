@@ -28,6 +28,6 @@
             </form>';
         }
     } catch (Exception $e) {
-        echo "Could not connect"
+        echo "Could not connect";
     }
 ?>

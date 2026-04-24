@@ -8,6 +8,6 @@
         $manager->executeBulkWrite("$dbName.bids", $bulk);
         echo 'Data has been reset';
     } catch (Exception $e){
-        echo "Error: " . $e->getMessage();
+        echo "Could not connect";
     }
 ?>
