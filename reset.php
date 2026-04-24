@@ -1,5 +1,5 @@
 <?php
-    require ('db_connect.php')
+    require ('db_connect.php');
     try {
         $bulk = new MongoDB\Driver\BulkWrite();
         $bulk->update(['item' => 'table'] , ['$set' => ['history' => [['when' => '2026-03-20' , 'price' => 1]]]]);

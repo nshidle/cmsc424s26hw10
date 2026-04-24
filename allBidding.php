@@ -1,5 +1,5 @@
 <?php
-    require ('db_connect.php')
+    require ('db_connect.php');
     try {
         $queryMongo = new MongoDB\Driver\Query([]);
         
