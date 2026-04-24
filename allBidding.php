@@ -1,7 +1,7 @@
 <?php
     require ('db_connect.php');
     try {
-        $queryMongo = new MongoDB\Driver\Query([]);
+        $queryMongo = new MongoDB\Driver\Query([], []);
         
         $result = $manager->executeQuery("$dbName.bids", $queryMongo);
         foreach ($result as $document) {
